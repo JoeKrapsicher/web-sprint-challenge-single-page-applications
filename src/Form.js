@@ -42,18 +42,18 @@ export default function Form() {
 {/*----------------------------------------------------NAME----------------------------------------------------------*/}              
                 <h3> Name </h3>
                 <label>First off, Whats your name?
-                    <input type="text" value={pizzaData.name} name="name" />
+                    <input onChange={change} type="text" value={pizzaData.name} name="name" />
                 </label>
 
 {/*----------------------------------------------------SIZE----------------------------------------------------------*/}
                 <h3> Size </h3>
 
                 <label>Choice of Size
-                    <select name="size" value={pizzaData.size}>
-                        <option value="">--Select One--</option>
-                        <option value="1">Small</option>
-                        <option value="2">Medium</option>
-                        <option value="3">Gigamax!</option>
+                    <select onChange={change} name="size"  value={pizzaData.size}>
+                        <option name="size" value="">--Select One--</option>
+                        <option name="size" value="1">Small</option>
+                        <option name="size" value="2">Medium</option>
+                        <option name="size" value="3">Gigamax!</option>
                     </select>
                 </label>
 
@@ -83,19 +83,19 @@ export default function Form() {
                 <h3> Toppings!? </h3>
 
                 <label>Pepperoni
-                    <input onChange={change} value="pepperoni" type="checkbox" name="toppings" checked={pizzaData.pepperoni} />
+                    <input onChange={change} value="pepperoni" type="checkbox" name="pepperoni" checked={pizzaData.pepperoni} />
                 </label>
 
                 <label>Ham
-                    <input onChange={change} value="ham" type="checkbox" name="toppings" checked={pizzaData.ham} />
+                    <input onChange={change} value="ham" type="checkbox" name="ham" checked={pizzaData.ham} />
                 </label>
 
                 <label>Bacon
-                    <input onChange={change} value="bacon" type="checkbox" name="toppings" checked={pizzaData.bacon} />
+                    <input onChange={change} value="bacon" type="checkbox" name="bacon" checked={pizzaData.bacon} />
                 </label>
 
                 <label>Sausage
-                    <input onChange={change} value="sausage" type="checkbox" name="toppings" checked={pizzaData.sausage} />
+                    <input onChange={change} value="sausage" type="checkbox" name="sausage" checked={pizzaData.sausage} />
                 </label>
 
             </div>

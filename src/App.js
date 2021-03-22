@@ -3,6 +3,10 @@ import React from "react";
 import Header from "./Header"
 // import '../Assets/Pizza.jpg';
 // import Form from "./Form.js";
+import {BrowserRouter, Link, Route} from 'react-router-dom'
+import Form from './Form'
+import "./App.css";
+import logo from './Pizza.jpg'
 
 
 // function About(props) {
@@ -12,7 +16,16 @@ import Header from "./Header"
 const App = () => {
   return (
     <div className="pizza-app">
-      <Header/>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/Form">Form</Link>
+
+
+        <Route exact path="/Form" component={Form}/>
+      </nav>
+      <h1>LAMBDA EATS</h1>
+      <img src={logo}/>
+
     </div>
   );
 };
